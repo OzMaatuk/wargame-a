@@ -8,14 +8,15 @@
  * @since  2020-05
  */
 
-#include "Board.hpp"
+class Board;
 
 namespace WarGame {
 	class DemoGame {
 	 private:
-	 	const int numRows = 8;
-		const int numCols = 8;
 		Board board;
+		const int numRows = 8;
+		const int numCols = 8;
+		enum class MoveDIR { Up, Down, Right, Left };
 	 public:
 
  		/**
@@ -26,7 +27,7 @@ namespace WarGame {
 		/**
 		 * This function runs a sample play of the game and returns the winner (1 or 2, or 0 in case of tie).
 		 */
-		uint play(); 
+		int play(); 
 
  		/**
 		 * The destructor deletes the soldiers from the board.
