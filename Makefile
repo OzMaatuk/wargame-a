@@ -4,7 +4,7 @@ CXX=clang++-9
 CXXFLAGS=-std=c++2a
 
 HEADERS := $(wildcard *.h*)
-TEACHER_SOURCES := DemoGame.cpp TestCounter.cpp
+TEACHER_SOURCES := DemoGame.cpp TestCounter.cpp Test.cpp
 STUDENT_SOURCES := $(filter-out $(TEACHER_SOURCES), $(wildcard *.cpp))
 STUDENT_OBJECTS := $(subst .hpp,.o,$(STUDENT_SOURCES))
 
